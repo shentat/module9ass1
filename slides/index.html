@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Module 9 Project on Developing Data Products</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Module 9 Project on Developing Data Products">
+  <meta name="author" content="Shen Tat">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Module 9 Project on Developing Data Products</h1>
+    <h2>GCD Calculator</h2>
+    <p>Shen Tat<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <!-- slide 2 -->
+
+<h2>Project Tasks</h2>
+
+<h3>This assignment requires us to do the following:</h3>
+
+<ul>
+<li>write a simple shiny application (and I&#39;ve chosen to write a function for computing the gcd)</li>
+<li>deploy on RStudio&#39;s shiny server: <a href="https://www.shinyapps.io">&quot;https://www.shinyapps.io&quot;</a></li>
+<li>share the server.R amd ui.R code on github, <a href="https://github.com">&quot;https://github.com&quot;</a></li>
+<li>create a 5-slide presentation using slidify</li>
+<li>and finally to publish the slides on github</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <article data-timings="">
+    <!-- slide 3 -->
+
+<h2>GCD Calculator</h2>
+
+<h3>Definition of GCD</h3>
+
+<ul>
+<li><p>it is the <em>greatest common divisor</em> of two or more integers, when at least one of them is not zero, is the largest positive integer that divides the numbers without a remainder. </p></li>
+<li><p>for example, the GCD of 8 and 12 is 4.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <article data-timings="">
+    <!-- slide 4 -->
+
+<h2>Implementation of the GCD</h2>
+
+<!-- function to compute the gcd for two numbers -->
+
+<pre><code class="r">gcd &lt;- function(x,y) {
+    r &lt;- x%%y;
+    return(ifelse(r, gcd(y, r), y))
+}
+</code></pre>
+
+<p>input: 8 and 12 give a gcd of</p>
+
+<pre><code class="r">gcd(8, 12)
+</code></pre>
+
+<pre><code>## [1] 4
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <article data-timings="">
+    <!-- slide 5 -->
+
+<h2>Sharing of the GCD application</h2>
+
+<ul>
+<li><p>I&#39;ve written the application and published on the RStudio&#39;s shiny server: GCD Calculator, <a href="https://shentat.shinyapps.io/m9a1">&quot;https://shentat.shinyapps.io/m9a1&quot;</a></p></li>
+<li><p>The code is shared on github as server.R and ui.R: Source Code, <a href="https://github.com/shentat/module9ass1">&quot;https://github.com/shentat/module9ass1&quot;</a></p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='NA'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='NA'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='NA'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
